@@ -16,6 +16,16 @@
 		6615C17128D3E503007E0515 /* MelfMusicProcessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C17028D3E503007E0515 /* MelfMusicProcessTests.swift */; };
 		6615C17B28D3E503007E0515 /* MelfMusicProcessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C17A28D3E503007E0515 /* MelfMusicProcessUITests.swift */; };
 		6615C17D28D3E503007E0515 /* MelfMusicProcessUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C17C28D3E503007E0515 /* MelfMusicProcessUITestsLaunchTests.swift */; };
+		6615C18E28D401B5007E0515 /* MelfAudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C18D28D401B5007E0515 /* MelfAudioEngine.swift */; };
+		6615C19028D40236007E0515 /* MelfPowerMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C18F28D40236007E0515 /* MelfPowerMeter.swift */; };
+		6615C19228D402C6007E0515 /* MelfMeterTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C19128D402C6007E0515 /* MelfMeterTable.swift */; };
+		6615C19428D40345007E0515 /* MelfLevelMeterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C19328D40345007E0515 /* MelfLevelMeterView.swift */; };
+		6615C19628D405B3007E0515 /* MelfMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6615C19528D405B3007E0515 /* MelfMusicViewController.swift */; };
+		6615C19C28D41D7C007E0515 /* sampleVoice48kHz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6615C19728D41D7C007E0515 /* sampleVoice48kHz.wav */; };
+		6615C19D28D41D7C007E0515 /* sampleVoice8kHz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6615C19828D41D7C007E0515 /* sampleVoice8kHz.wav */; };
+		6615C19E28D41D7C007E0515 /* sampleVoice16kHz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6615C19928D41D7C007E0515 /* sampleVoice16kHz.wav */; };
+		6615C19F28D41D7C007E0515 /* sampleVoice441kHz.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6615C19A28D41D7C007E0515 /* sampleVoice441kHz.wav */; };
+		6615C1A028D41D7C007E0515 /* Synth.aif in Resources */ = {isa = PBXBuildFile; fileRef = 6615C19B28D41D7C007E0515 /* Synth.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +59,16 @@
 		6615C17628D3E503007E0515 /* MelfMusicProcessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MelfMusicProcessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6615C17A28D3E503007E0515 /* MelfMusicProcessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfMusicProcessUITests.swift; sourceTree = "<group>"; };
 		6615C17C28D3E503007E0515 /* MelfMusicProcessUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfMusicProcessUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6615C18D28D401B5007E0515 /* MelfAudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfAudioEngine.swift; sourceTree = "<group>"; };
+		6615C18F28D40236007E0515 /* MelfPowerMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfPowerMeter.swift; sourceTree = "<group>"; };
+		6615C19128D402C6007E0515 /* MelfMeterTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfMeterTable.swift; sourceTree = "<group>"; };
+		6615C19328D40345007E0515 /* MelfLevelMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfLevelMeterView.swift; sourceTree = "<group>"; };
+		6615C19528D405B3007E0515 /* MelfMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelfMusicViewController.swift; sourceTree = "<group>"; };
+		6615C19728D41D7C007E0515 /* sampleVoice48kHz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sampleVoice48kHz.wav; sourceTree = "<group>"; };
+		6615C19828D41D7C007E0515 /* sampleVoice8kHz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sampleVoice8kHz.wav; sourceTree = "<group>"; };
+		6615C19928D41D7C007E0515 /* sampleVoice16kHz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sampleVoice16kHz.wav; sourceTree = "<group>"; };
+		6615C19A28D41D7C007E0515 /* sampleVoice441kHz.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sampleVoice441kHz.wav; sourceTree = "<group>"; };
+		6615C19B28D41D7C007E0515 /* Synth.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synth.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +119,10 @@
 		6615C15828D3E501007E0515 /* MelfMusicProcess */ = {
 			isa = PBXGroup;
 			children = (
+				6615C18C28D3E59B007E0515 /* res */,
+				6615C18B28D3E590007E0515 /* model */,
+				6615C18A28D3E57F007E0515 /* view */,
+				6615C18928D3E573007E0515 /* controller */,
 				6615C15928D3E501007E0515 /* AppDelegate.swift */,
 				6615C15B28D3E501007E0515 /* SceneDelegate.swift */,
 				6615C15D28D3E501007E0515 /* ViewController.swift */,
@@ -125,6 +149,44 @@
 				6615C17C28D3E503007E0515 /* MelfMusicProcessUITestsLaunchTests.swift */,
 			);
 			path = MelfMusicProcessUITests;
+			sourceTree = "<group>";
+		};
+		6615C18928D3E573007E0515 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				6615C19528D405B3007E0515 /* MelfMusicViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		6615C18A28D3E57F007E0515 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		6615C18B28D3E590007E0515 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				6615C18D28D401B5007E0515 /* MelfAudioEngine.swift */,
+				6615C18F28D40236007E0515 /* MelfPowerMeter.swift */,
+				6615C19128D402C6007E0515 /* MelfMeterTable.swift */,
+				6615C19328D40345007E0515 /* MelfLevelMeterView.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		6615C18C28D3E59B007E0515 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				6615C19828D41D7C007E0515 /* sampleVoice8kHz.wav */,
+				6615C19928D41D7C007E0515 /* sampleVoice16kHz.wav */,
+				6615C19728D41D7C007E0515 /* sampleVoice48kHz.wav */,
+				6615C19A28D41D7C007E0515 /* sampleVoice441kHz.wav */,
+				6615C19B28D41D7C007E0515 /* Synth.aif */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +293,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6615C19D28D41D7C007E0515 /* sampleVoice8kHz.wav in Resources */,
+				6615C19F28D41D7C007E0515 /* sampleVoice441kHz.wav in Resources */,
 				6615C16628D3E503007E0515 /* LaunchScreen.storyboard in Resources */,
+				6615C19E28D41D7C007E0515 /* sampleVoice16kHz.wav in Resources */,
+				6615C19C28D41D7C007E0515 /* sampleVoice48kHz.wav in Resources */,
+				6615C1A028D41D7C007E0515 /* Synth.aif in Resources */,
 				6615C16328D3E503007E0515 /* Assets.xcassets in Resources */,
 				6615C16128D3E501007E0515 /* Main.storyboard in Resources */,
 			);
@@ -258,6 +325,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6615C18E28D401B5007E0515 /* MelfAudioEngine.swift in Sources */,
+				6615C19028D40236007E0515 /* MelfPowerMeter.swift in Sources */,
+				6615C19428D40345007E0515 /* MelfLevelMeterView.swift in Sources */,
+				6615C19228D402C6007E0515 /* MelfMeterTable.swift in Sources */,
+				6615C19628D405B3007E0515 /* MelfMusicViewController.swift in Sources */,
 				6615C15E28D3E501007E0515 /* ViewController.swift in Sources */,
 				6615C15A28D3E501007E0515 /* AppDelegate.swift in Sources */,
 				6615C15C28D3E501007E0515 /* SceneDelegate.swift in Sources */,

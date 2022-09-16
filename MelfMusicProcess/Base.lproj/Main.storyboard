@@ -1,24 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Melf Music View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MelfMusicViewController" customModule="MelfMusicProcess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XE4-ou-Drx">
+                                <rect key="frame" x="20" y="88" width="100" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="VOh-0c-xEi"/>
+                                    <constraint firstAttribute="height" constant="19.5" id="k2I-gZ-jVK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jaa-94-wUD" userLabel="Fx Switch">
+                                <rect key="frame" x="345" y="82.5" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="agI-Hv-Dzr"/>
+                                    <constraint firstAttribute="height" constant="31" id="rLf-0h-SGB"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="fxSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="DW5-zm-YPM"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4s-jj-KDU" userLabel="Fx Meter" customClass="MelfLevelMeterView" customModule="MelfMusicProcess" customModuleProvider="target">
+                                <rect key="frame" x="20" y="115" width="374" height="49"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="l1U-i8-nHy"/>
+                                </constraints>
+                            </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" minimumValueImage="speaker" catalog="system" maximumValueImage="speaker.wave.3.fill" translatesAutoresizingMaskIntoConstraints="NO" id="eMj-4t-3OC" userLabel="Fx Slider">
+                                <rect key="frame" x="18" y="172" width="378" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="QKh-bd-TQx"/>
+                                    <constraint firstAttribute="width" constant="374" id="uv4-Ab-xp5"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slideFxOut:" destination="BYZ-38-t0r" eventType="valueChanged" id="GtO-xU-y8G"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speech Out" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Z2-bV-U9O">
+                                <rect key="frame" x="20" y="305" width="85.5" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85.5" id="N5e-lu-f1q"/>
+                                    <constraint firstAttribute="height" constant="19.5" id="lJl-rl-WIk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="me3-vq-Xr7" userLabel="Speech Switch">
+                                <rect key="frame" x="345" y="299.5" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="cnO-K6-xSd"/>
+                                    <constraint firstAttribute="width" constant="49" id="ow0-jz-zWz"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="speechSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="l80-cd-1jY"/>
+                                </connections>
+                            </switch>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26q-0L-Pop" customClass="MelfLevelMeterView" customModule="MelfMusicProcess" customModuleProvider="target">
+                                <rect key="frame" x="20" y="332" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="s2Q-JZ-scz"/>
+                                    <constraint firstAttribute="height" constant="50" id="tk7-Wk-Y7u"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Procesing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vwc-i9-1iz">
+                                <rect key="frame" x="20" y="493" width="116.5" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116.5" id="Gun-KF-vP0"/>
+                                    <constraint firstAttribute="height" constant="19.5" id="YMZ-lf-rVE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBs-O7-l0e" customClass="MelfLevelMeterView" customModule="MelfMusicProcess" customModuleProvider="target">
+                                <rect key="frame" x="20" y="520" width="374" height="50"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="RXe-4X-xu2"/>
+                                    <constraint firstAttribute="height" constant="50" id="pAZ-YN-yJK"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bypass Voice Processing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Log-B1-vsv">
+                                <rect key="frame" x="20" y="675" width="181" height="19.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19.5" id="XL7-Zn-M9o"/>
+                                    <constraint firstAttribute="width" constant="181" id="gx8-m6-xjZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jZJ-i7-gNf" userLabel="Bypass Switch">
+                                <rect key="frame" x="345" y="669.5" width="51" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="YBb-gG-v06"/>
+                                    <constraint firstAttribute="height" constant="31" id="z5t-dZ-TsD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="bypassSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="3lX-Rw-P3B"/>
+                                </connections>
+                            </switch>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWb-7k-v8Z">
+                                <rect key="frame" x="20" y="736" width="60" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="GpT-9W-3Nr"/>
+                                    <constraint firstAttribute="width" constant="60" id="tCn-Lx-vsB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="recordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8o-ha-IVM"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCI-bv-Lbc">
+                                <rect key="frame" x="334" y="736" width="60" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="x8g-Zb-22y"/>
+                                    <constraint firstAttribute="width" constant="60" id="xhM-xO-vnj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZeX-uL-oaX"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" minimumValueImage="speaker" catalog="system" maximumValueImage="speaker.wave.3.fill" translatesAutoresizingMaskIntoConstraints="NO" id="U1e-fs-Jd9" userLabel="speechSlider">
+                                <rect key="frame" x="18" y="390" width="378" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="AlM-0g-vsr"/>
+                                    <constraint firstAttribute="width" constant="374" id="hrL-xo-nzX"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="slideSpeechOut:" destination="BYZ-38-t0r" eventType="valueChanged" id="zGc-Yp-TuW"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Z2-bV-U9O" firstAttribute="top" secondItem="e4s-jj-KDU" secondAttribute="bottom" constant="141" id="0Sg-6R-1mw"/>
+                            <constraint firstItem="XE4-ou-Drx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="2yp-Nx-7LV"/>
+                            <constraint firstItem="U1e-fs-Jd9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7Zc-JK-FhY"/>
+                            <constraint firstItem="e4s-jj-KDU" firstAttribute="top" secondItem="XE4-ou-Drx" secondAttribute="bottom" constant="7.5" id="BqW-WS-t7E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QBs-O7-l0e" secondAttribute="trailing" constant="20" id="D5H-y1-7Jm"/>
+                            <constraint firstItem="26q-0L-Pop" firstAttribute="top" secondItem="4Z2-bV-U9O" secondAttribute="bottom" constant="7.5" id="ILM-xw-CWe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="me3-vq-Xr7" secondAttribute="trailing" constant="20" id="KOK-ON-OtG"/>
+                            <constraint firstItem="26q-0L-Pop" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KaA-r5-m4O"/>
+                            <constraint firstItem="U1e-fs-Jd9" firstAttribute="top" secondItem="26q-0L-Pop" secondAttribute="bottom" constant="8" symbolic="YES" id="Kel-oc-YBq"/>
+                            <constraint firstItem="QBs-O7-l0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LmZ-mR-qCK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UCI-bv-Lbc" secondAttribute="trailing" constant="20" id="Lv2-d4-WFk"/>
+                            <constraint firstItem="me3-vq-Xr7" firstAttribute="centerY" secondItem="4Z2-bV-U9O" secondAttribute="centerY" id="TWs-MG-KIH"/>
+                            <constraint firstItem="eMj-4t-3OC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VZ8-6L-6j2"/>
+                            <constraint firstItem="Log-B1-vsv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WHP-19-PIe"/>
+                            <constraint firstItem="e4s-jj-KDU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XAJ-BE-Tos"/>
+                            <constraint firstItem="UWb-7k-v8Z" firstAttribute="top" secondItem="Log-B1-vsv" secondAttribute="bottom" constant="41.5" id="XAk-rF-q9a"/>
+                            <constraint firstItem="Vwc-i9-1iz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aNC-0E-29A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="26q-0L-Pop" secondAttribute="trailing" constant="20" id="ccc-8L-qt9"/>
+                            <constraint firstItem="4Z2-bV-U9O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eAK-BT-bDm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eMj-4t-3OC" secondAttribute="trailing" constant="20" id="eIJ-1L-7Wx"/>
+                            <constraint firstItem="Jaa-94-wUD" firstAttribute="centerY" secondItem="XE4-ou-Drx" secondAttribute="centerY" id="evt-LL-S8y"/>
+                            <constraint firstItem="jZJ-i7-gNf" firstAttribute="centerY" secondItem="Log-B1-vsv" secondAttribute="centerY" id="hVn-jh-e5y"/>
+                            <constraint firstItem="UCI-bv-Lbc" firstAttribute="centerY" secondItem="UWb-7k-v8Z" secondAttribute="centerY" id="hpk-lt-y8U"/>
+                            <constraint firstItem="eMj-4t-3OC" firstAttribute="top" secondItem="e4s-jj-KDU" secondAttribute="bottom" constant="8" symbolic="YES" id="iod-eQ-yc1"/>
+                            <constraint firstItem="Log-B1-vsv" firstAttribute="top" secondItem="QBs-O7-l0e" secondAttribute="bottom" constant="105" id="jCz-Kr-RFe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZJ-i7-gNf" secondAttribute="trailing" constant="20" id="jYU-U2-TI0"/>
+                            <constraint firstItem="UWb-7k-v8Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jkr-xr-lQ0"/>
+                            <constraint firstItem="Vwc-i9-1iz" firstAttribute="top" secondItem="26q-0L-Pop" secondAttribute="bottom" constant="111" id="kQq-CE-WaE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jaa-94-wUD" secondAttribute="trailing" constant="20" id="lSr-OM-jmP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U1e-fs-Jd9" secondAttribute="trailing" constant="20" id="lYD-KS-PzU"/>
+                            <constraint firstItem="XE4-ou-Drx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pCK-lz-BQE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e4s-jj-KDU" secondAttribute="trailing" constant="20" id="rDW-dZ-pGH"/>
+                            <constraint firstItem="QBs-O7-l0e" firstAttribute="top" secondItem="Vwc-i9-1iz" secondAttribute="bottom" constant="7.5" id="zA0-eA-sKG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bypassSwitch" destination="jZJ-i7-gNf" id="D9g-eA-dVG"/>
+                        <outlet property="fxMeter" destination="e4s-jj-KDU" id="khp-ij-Gk0"/>
+                        <outlet property="fxSlider" destination="eMj-4t-3OC" id="OxM-oq-fKg"/>
+                        <outlet property="fxSwitch" destination="Jaa-94-wUD" id="o2Y-2z-1BE"/>
+                        <outlet property="playButton" destination="UCI-bv-Lbc" id="cHP-eE-dGk"/>
+                        <outlet property="recordButton" destination="UWb-7k-v8Z" id="V7W-1a-8gu"/>
+                        <outlet property="speechMeter" destination="26q-0L-Pop" id="f78-0Z-xmT"/>
+                        <outlet property="speechSlider" destination="U1e-fs-Jd9" id="jfW-ah-ayH"/>
+                        <outlet property="speechSwitch" destination="me3-vq-Xr7" id="SYv-Y8-TNt"/>
+                        <outlet property="voiceIOMeter" destination="QBs-O7-l0e" id="7Mg-If-CXJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="speaker" catalog="system" width="128" height="124"/>
+        <image name="speaker.wave.3.fill" catalog="system" width="128" height="86"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
